@@ -12,4 +12,9 @@ class Category extends Model
         'description',
     ];
     use HasFactory;
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
